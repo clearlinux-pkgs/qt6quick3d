@@ -1,0 +1,6 @@
+# This file contains additional build requirements that did not get
+# picked up automatically. One name per line, no whitespace.
+qt6declarative-dev
+qt6shadertools-dev
+assimp-dev
+zlib-dev
