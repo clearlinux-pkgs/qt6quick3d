@@ -7,13 +7,12 @@
 #
 Name     : qt6quick3d
 Version  : 6.6.3
-Release  : 14
+Release  : 15
 URL      : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtquick3d-everywhere-src-6.6.3.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtquick3d-everywhere-src-6.6.3.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause CC0-1.0 GFDL-1.3 GPL-2.0 GPL-3.0 LGPL-3.0 MIT
-Requires: qt6quick3d-bin = %{version}-%{release}
 Requires: qt6quick3d-lib = %{version}-%{release}
 Requires: qt6quick3d-license = %{version}-%{release}
 BuildRequires : assimp-dev
@@ -37,20 +36,10 @@ INSTALLATION GUIDE
 Dependencies
 ------------
 
-%package bin
-Summary: bin components for the qt6quick3d package.
-Group: Binaries
-Requires: qt6quick3d-license = %{version}-%{release}
-
-%description bin
-bin components for the qt6quick3d package.
-
-
 %package dev
 Summary: dev components for the qt6quick3d package.
 Group: Development
 Requires: qt6quick3d-lib = %{version}-%{release}
-Requires: qt6quick3d-bin = %{version}-%{release}
 Provides: qt6quick3d-devel = %{version}-%{release}
 Requires: qt6quick3d = %{version}-%{release}
 
@@ -84,7 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1711484971
+export SOURCE_DATE_EPOCH=1711493283
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -145,7 +134,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1711484971
+export SOURCE_DATE_EPOCH=1711493283
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6quick3d
 cp %{_builddir}/qtquick3d-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6quick3d/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
@@ -178,23 +167,6 @@ popd
 
 %files
 %defattr(-,root,root,-)
-
-%files bin
-%defattr(-,root,root,-)
-/V3/usr/bin/balsam
-/V3/usr/bin/balsamui
-/V3/usr/bin/instancer
-/V3/usr/bin/materialeditor
-/V3/usr/bin/meshdebug
-/V3/usr/bin/shadergen
-/V3/usr/bin/shapegen
-/usr/bin/balsam
-/usr/bin/balsamui
-/usr/bin/instancer
-/usr/bin/materialeditor
-/usr/bin/meshdebug
-/usr/bin/shadergen
-/usr/bin/shapegen
 
 %files dev
 %defattr(-,root,root,-)
@@ -712,6 +684,13 @@ popd
 /V3/usr/lib64/libQt6Quick3DParticles.so.6.6.3
 /V3/usr/lib64/libQt6Quick3DRuntimeRender.so.6.6.3
 /V3/usr/lib64/libQt6Quick3DUtils.so.6.6.3
+/V3/usr/lib64/qt6/bin/balsam
+/V3/usr/lib64/qt6/bin/balsamui
+/V3/usr/lib64/qt6/bin/instancer
+/V3/usr/lib64/qt6/bin/materialeditor
+/V3/usr/lib64/qt6/bin/meshdebug
+/V3/usr/lib64/qt6/bin/shadergen
+/V3/usr/lib64/qt6/bin/shapegen
 /V3/usr/lib64/qt6/plugins/assetimporters/libassimp.so
 /V3/usr/lib64/qt6/plugins/qmltooling/libqmldbg_quick3dprofiler.so
 /V3/usr/lib64/qt6/qml/QtQuick3D/AssetUtils/libqtquick3dassetutilsplugin.so
@@ -745,6 +724,13 @@ popd
 /usr/lib64/libQt6Quick3DRuntimeRender.so.6.6.3
 /usr/lib64/libQt6Quick3DUtils.so.6
 /usr/lib64/libQt6Quick3DUtils.so.6.6.3
+/usr/lib64/qt6/bin/balsam
+/usr/lib64/qt6/bin/balsamui
+/usr/lib64/qt6/bin/instancer
+/usr/lib64/qt6/bin/materialeditor
+/usr/lib64/qt6/bin/meshdebug
+/usr/lib64/qt6/bin/shadergen
+/usr/lib64/qt6/bin/shapegen
 /usr/lib64/qt6/metatypes/qt6quick3d_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/metatypes/qt6quick3dassetimport_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/metatypes/qt6quick3dassetutils_relwithdebinfo_metatypes.json
