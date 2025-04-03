@@ -20,6 +20,7 @@ libQt6Quick3D.so.6:QQuick3DAbstractLight::setShadowFilter(float)@@Qt_6_PRIVATE_A
 libQt6Quick3D.so.6:QQuick3DAbstractLight::setShadowMapFar(float)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DAbstractLight::setShadowMapQuality(QQuick3DAbstractLight::QSSGShadowMapQuality)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DAbstractLight::setSoftShadowQuality(QQuick3DAbstractLight::QSSGSoftShadowQuality)@@Qt_6_PRIVATE_API
+libQt6Quick3D.so.6:QQuick3DAbstractLight::setUse32BitShadowmap(bool)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DAbstractLight::shadowBiasChanged()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DAbstractLight::shadowFactorChanged()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DAbstractLight::shadowFilterChanged()@@Qt_6_PRIVATE_API
@@ -27,6 +28,7 @@ libQt6Quick3D.so.6:QQuick3DAbstractLight::shadowMapFarChanged()@@Qt_6_PRIVATE_AP
 libQt6Quick3D.so.6:QQuick3DAbstractLight::shadowMapQualityChanged()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DAbstractLight::softShadowQualityChanged()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DAbstractLight::updateSpatialNode(QSSGRenderGraphObject*)@@Qt_6_PRIVATE_API
+libQt6Quick3D.so.6:QQuick3DAbstractLight::use32BitShadowmapChanged()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DAbstractLight::~QQuick3DAbstractLight()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DBakedLightmap::changed()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DBakedLightmap::enabledChanged()@@Qt_6_PRIVATE_API
@@ -77,6 +79,7 @@ libQt6Quick3D.so.6:QQuick3DDebugSettings::changed()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDebugSettings::disableShadowCameraUpdateChanged()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDebugSettings::drawCascadesChanged()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDebugSettings::drawDirectionalLightShadowBoxesChanged()@@Qt_6_PRIVATE_API
+libQt6Quick3D.so.6:QQuick3DDebugSettings::drawPointLightShadowBoxesChanged()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDebugSettings::drawSceneCascadeIntersectionChanged()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDebugSettings::drawShadowCastingBoundsChanged()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDebugSettings::drawShadowReceivingBoundsChanged()@@Qt_6_PRIVATE_API
@@ -84,6 +87,7 @@ libQt6Quick3D.so.6:QQuick3DDebugSettings::materialOverrideChanged()@@Qt_6_PRIVAT
 libQt6Quick3D.so.6:QQuick3DDebugSettings::setDisableShadowCameraUpdate(bool)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDebugSettings::setDrawCascades(bool)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDebugSettings::setDrawDirectionalLightShadowBoxes(bool)@@Qt_6_PRIVATE_API
+libQt6Quick3D.so.6:QQuick3DDebugSettings::setDrawPointLightShadowBoxes(bool)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDebugSettings::setDrawSceneCascadeIntersection(bool)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDebugSettings::setDrawShadowCastingBounds(bool)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDebugSettings::setDrawShadowReceivingBounds(bool)@@Qt_6_PRIVATE_API
@@ -161,11 +165,13 @@ libQt6Quick3D.so.6:QQuick3DDirectionalLight::csmNumSplitsChanged()@@Qt_6_PRIVATE
 libQt6Quick3D.so.6:QQuick3DDirectionalLight::csmSplit1Changed()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDirectionalLight::csmSplit2Changed()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDirectionalLight::csmSplit3Changed()@@Qt_6_PRIVATE_API
+libQt6Quick3D.so.6:QQuick3DDirectionalLight::lockShadowmapTexelsChanged()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDirectionalLight::setCsmBlendRatio(float)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDirectionalLight::setCsmNumSplits(int)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDirectionalLight::setCsmSplit1(float)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDirectionalLight::setCsmSplit2(float)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDirectionalLight::setCsmSplit3(float)@@Qt_6_PRIVATE_API
+libQt6Quick3D.so.6:QQuick3DDirectionalLight::setLockShadowmapTexels(bool)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DDirectionalLight::updateSpatialNode(QSSGRenderGraphObject*)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DEffect::QQuick3DEffect(QQuick3DObject*)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DEffect::effectChainDirty()@@Qt_6_PRIVATE_API
@@ -274,6 +280,8 @@ libQt6Quick3D.so.6:QQuick3DInstancing::markDirty()@@Qt_6
 libQt6Quick3D.so.6:QQuick3DInstancing::setDepthSortingEnabled(bool)@@Qt_6
 libQt6Quick3D.so.6:QQuick3DInstancing::setHasTransparency(bool)@@Qt_6
 libQt6Quick3D.so.6:QQuick3DInstancing::setInstanceCountOverride(int)@@Qt_6
+libQt6Quick3D.so.6:QQuick3DInstancing::shadowBoundsMaximumChanged()@@Qt_6
+libQt6Quick3D.so.6:QQuick3DInstancing::shadowBoundsMinimumChanged()@@Qt_6
 libQt6Quick3D.so.6:QQuick3DInstancing::updateSpatialNode(QSSGRenderGraphObject*)@@Qt_6
 libQt6Quick3D.so.6:QQuick3DInstancing::~QQuick3DInstancing()@@Qt_6
 libQt6Quick3D.so.6:QQuick3DJoint::QQuick3DJoint(QQuick3DNode*)@@Qt_6_PRIVATE_API
@@ -778,6 +786,7 @@ libQt6Quick3D.so.6:QQuick3DSceneEnvironment::effects()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DSceneEnvironment::fogChanged()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DSceneEnvironment::lightProbeChanged()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DSceneEnvironment::lightmapperChanged()@@Qt_6_PRIVATE_API
+libQt6Quick3D.so.6:QQuick3DSceneEnvironment::oitMethodChanged()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DSceneEnvironment::probeExposureChanged()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DSceneEnvironment::probeHorizonChanged()@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DSceneEnvironment::probeOrientationChanged()@@Qt_6_PRIVATE_API
@@ -802,6 +811,7 @@ libQt6Quick3D.so.6:QQuick3DSceneEnvironment::setGridEnabled(bool)@@Qt_6_PRIVATE_
 libQt6Quick3D.so.6:QQuick3DSceneEnvironment::setGridScale(float)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DSceneEnvironment::setLightProbe(QQuick3DTexture*)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DSceneEnvironment::setLightmapper(QQuick3DLightmapper*)@@Qt_6_PRIVATE_API
+libQt6Quick3D.so.6:QQuick3DSceneEnvironment::setOitMethod(QQuick3DSceneEnvironment::QQuick3DEnvironmentOITMethod)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DSceneEnvironment::setProbeExposure(float)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DSceneEnvironment::setProbeHorizon(float)@@Qt_6_PRIVATE_API
 libQt6Quick3D.so.6:QQuick3DSceneEnvironment::setScissorRect(QRect)@@Qt_6_PRIVATE_API
@@ -1756,9 +1766,10 @@ libQt6Quick3DRuntimeRender.so.6:QSSGBufferManager::releaseResourcesForLayer(QSSG
 libQt6Quick3DRuntimeRender.so.6:QSSGBufferManager::setRenderContextInterface(QSSGRenderContextInterface*)@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGBufferManager::toRhiFormat(QSSGRenderTextureFormat)@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGBufferManager::~QSSGBufferManager()@@Qt_6_PRIVATE_API
+libQt6Quick3DRuntimeRender.so.6:QSSGBuiltInRhiShaderCache::getRhiClearMRTShader()@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGBuiltInRhiShaderCache::getRhiCubemapShadowBlurXShader()@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGBuiltInRhiShaderCache::getRhiCubemapShadowBlurYShader()@@Qt_6_PRIVATE_API
-libQt6Quick3DRuntimeRender.so.6:QSSGBuiltInRhiShaderCache::getRhiDebugObjectShader()@@Qt_6_PRIVATE_API
+libQt6Quick3DRuntimeRender.so.6:QSSGBuiltInRhiShaderCache::getRhiDebugObjectShader(int)@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGBuiltInRhiShaderCache::getRhiEnvironmentmapShader()@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGBuiltInRhiShaderCache::getRhiGridShader(int)@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGBuiltInRhiShaderCache::getRhiLightmapDilateShader()@@Qt_6_PRIVATE_API
@@ -1797,6 +1808,7 @@ libQt6Quick3DRuntimeRender.so.6:QSSGLayerRenderData::prepareResourceLoaders()@@Q
 libQt6Quick3DRuntimeRender.so.6:QSSGLayerRenderData::requestReflectionMapManager()@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGLayerRenderData::requestShadowMapManager()@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGLayerRenderData::resetForFrame()@@Qt_6_PRIVATE_API
+libQt6Quick3DRuntimeRender.so.6:QSSGLayerRenderData::restoreRenderState(QSSGRenderer&)@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGLayerRenderData::~QSSGLayerRenderData()@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGLoadedTexture::loadTextureData(QSSGRenderTextureData*)@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGLoadedTexture::~QSSGLoadedTexture()@@Qt_6_PRIVATE_API
@@ -1906,10 +1918,12 @@ libQt6Quick3DRuntimeRender.so.6:QSSGRenderTextureData::~QSSGRenderTextureData()@
 libQt6Quick3DRuntimeRender.so.6:QSSGRenderer::QSSGRenderer()@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGRenderer::addMaterialDirtyClear(QSSGRenderGraphObject*)@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGRenderer::beginLayerRender(QSSGLayerRenderData&)@@Qt_6_PRIVATE_API
+libQt6Quick3DRuntimeRender.so.6:QSSGRenderer::beginSubLayerRender(QSSGLayerRenderData&)@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGRenderer::cleanupResources(QList<QSSGRenderGraphObject*>&)@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGRenderer::cleanupResources(QSet<QSSGRenderGraphObject*>&)@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGRenderer::cleanupUnreferencedBuffers(QSSGRenderLayer*)@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGRenderer::endLayerRender()@@Qt_6_PRIVATE_API
+libQt6Quick3DRuntimeRender.so.6:QSSGRenderer::endSubLayerRender(QSSGLayerRenderData&)@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGRenderer::getOrCreateLayerRenderData(QSSGRenderLayer&)@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGRenderer::prepareLayerForRender(QSSGRenderLayer&)@@Qt_6_PRIVATE_API
 libQt6Quick3DRuntimeRender.so.6:QSSGRenderer::releaseCachedResources()@@Qt_6_PRIVATE_API
@@ -2185,7 +2199,6 @@ libQt6Quick3DXr.so.6:QQuick3DXrView::sessionEnded()@@Qt_6_PRIVATE_API
 libQt6Quick3DXr.so.6:QQuick3DXrView::setDepthSubmissionEnabled(bool)@@Qt_6_PRIVATE_API
 libQt6Quick3DXr.so.6:QQuick3DXrView::setEnvironment(QQuick3DSceneEnvironment*)@@Qt_6_PRIVATE_API
 libQt6Quick3DXr.so.6:QQuick3DXrView::setFixedFoveation(QQuick3DXrView::FoveationLevel)@@Qt_6_PRIVATE_API
-libQt6Quick3DXr.so.6:QQuick3DXrView::setMultiViewRenderingEnabled(bool)@@Qt_6_PRIVATE_API
 libQt6Quick3DXr.so.6:QQuick3DXrView::setPassthroughEnabled(bool)@@Qt_6_PRIVATE_API
 libQt6Quick3DXr.so.6:QQuick3DXrView::setQuitOnSessionEnd(bool)@@Qt_6_PRIVATE_API
 libQt6Quick3DXr.so.6:QQuick3DXrView::setReferenceSpace(QQuick3DXrView::ReferenceSpace)@@Qt_6_PRIVATE_API
@@ -2194,6 +2207,7 @@ libQt6Quick3DXr.so.6:QQuick3DXrView::unregisterXrItem(QQuick3DXrItem*)@@Qt_6_PRI
 libQt6Quick3DXr.so.6:QQuick3DXrView::updateViewportGeometry()@@Qt_6_PRIVATE_API
 libQt6Quick3DXr.so.6:QQuick3DXrView::xrOriginChanged()@@Qt_6_PRIVATE_API
 libQt6Quick3DXr.so.6:QQuick3DXrView::~QQuick3DXrView()@@Qt_6_PRIVATE_API
+libQt6Quick3DXr.so.6:QQuick3DXrViewPrivate::getView3d(QQuick3DXrView*)@@Qt_6_PRIVATE_API
 libQt6Quick3DXr.so.6:Qt_6
 libQt6Quick3DXr.so.6:Qt_6_PRIVATE_API
 libQt6Quick3DXr.so.6:qml_register_types_QtQuick3D_Xr()@@Qt_6
@@ -2239,6 +2253,7 @@ libQt6Quick3DXr.so.6:xrGetSystem@@Qt_6
 libQt6Quick3DXr.so.6:xrGetSystemProperties@@Qt_6
 libQt6Quick3DXr.so.6:xrGetViewConfigurationProperties@@Qt_6
 libQt6Quick3DXr.so.6:xrLocateSpace@@Qt_6
+libQt6Quick3DXr.so.6:xrLocateSpaces@@Qt_6
 libQt6Quick3DXr.so.6:xrLocateViews@@Qt_6
 libQt6Quick3DXr.so.6:xrPathToString@@Qt_6
 libQt6Quick3DXr.so.6:xrPollEvent@@Qt_6
